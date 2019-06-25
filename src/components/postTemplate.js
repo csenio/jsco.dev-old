@@ -10,17 +10,25 @@ const MarkdownContainer = styled.div`
   color: purple;
 `
 
-const postTemplate = ({ data }) => {
+export const PostTemplate = ({ html, frontmatter }) => {
+  return (
+    <>
+      <h1>{frontmatter.title}</h1>
+      <MarkdownContainer dangerouslySetInnerHTML={{ __html: html }} />
+    </>
+  )
+}
+
+const Post = ({ data }) => {
   const { html, frontmatter } = data.markdownRemark
   return (
     <Layout>
-      <h1>{frontmatter.title}</h1>
-      <MarkdownContainer dangerouslySetInnerHTML={{ __html: html }} />
+      <PostTemplate html={html} frontmatter={frontmatter} />
     </Layout>
   )
 }
 
-export default postTemplate
+export default Post
 
 export const query = graphql`
   query PostQuery($title: String!) {
