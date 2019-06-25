@@ -3,7 +3,10 @@ import PropTypes from "prop-types"
 import { PostTemplate } from "components/postTemplate"
 
 const AboutPagePreview = ({ entry, widgetFor }) => (
-  <PostTemplate frontmatter={entry.getIn(["title"])} html={widgetFor("body")} />
+  <PostTemplate
+    frontmatter={entry.getIn(["data", "title"])}
+    html={widgetFor("body")}
+  />
 )
 
 AboutPagePreview.propTypes = {
