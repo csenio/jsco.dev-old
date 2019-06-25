@@ -58,10 +58,10 @@ module.exports = {
         plugins: [],
       },
     },
-    {
-      resolve: `gatsby-plugin-create-client-paths`,
-      options: { prefixes: [`/blog/*`] },
-    },
+    // {
+    //   resolve: `gatsby-plugin-create-client-paths`,
+    //   options: { prefixes: [`/blog/*`] },
+    // },
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
   ],
