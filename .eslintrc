@@ -3,7 +3,15 @@
     "browser": true,
     "es6": true
   },
-  "plugins": ["react", "react-hooks"],
+  "extends": [
+    "kentcdodds/possible-errors",
+    "kentcdodds/best-practices",
+    "kentcdodds/es6/possible-errors",
+    "kentcdodds/es6/best-practices",
+    "kentcdodds/jest",
+    "kentcdodds/react"
+  ],
+  "plugins": ["react", "jsx-a11y", "react-hooks"],
   "globals": {
     "graphql": false
   },
@@ -15,6 +23,20 @@
   },
   "rules": {
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    "react-hooks/exhaustive-deps": "warn",
+    "babel/quotes": "off",
+    "babel/camelcase": "off",
+    "react/prop-types": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": [
+        ["components", "./src/components"],
+        ["context", "./src/context"],
+        ["hooks", "./src/hooks"],
+        ["helpers", "./src/helpers"],
+        ["pages", "./src/pages"]
+      ]
+    }
   }
 }

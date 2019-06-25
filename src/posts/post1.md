@@ -1,5 +1,4 @@
 ---
-slug: "/first-post"
 date: "2019-06-24"
 title: "Our first Post"
 ---

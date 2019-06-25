@@ -1,15 +1,25 @@
 const path = require("path")
 
+const slugify = (text = "") =>
+  text
+    .toString()
+    .toLowerCase()
+    .replace(/\s+/g, "-") // Replace spaces with -
+    .replace(/[^\w-]+/g, "") // Remove all non-word chars
+    .replace(/--+/g, "-") // Replace multiple - with single -
+    .replace(/^-+/, "") // Trim - from start of text
+    .replace(/-+$/, "") // Trim - from end of text
+
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
-  return new Promise((resolve, reject) => {
+  return new Promise(resolve => {
     graphql(`
       {
         allMarkdownRemark {
           edges {
             node {
               frontmatter {
-                slug
+                title
               }
             }
           }
@@ -17,15 +27,31 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `).then(results => {
       results.data.allMarkdownRemark.edges.forEach(({ node }) => {
+        const slug = slugify(node.frontmatter.title)
+
         createPage({
-          path: `/blog${node.frontmatter.slug}`,
+          path: `/blog/${slug}`,
           component: path.resolve("./src/components/postTemplate.js"),
           context: {
-            slug: node.frontmatter.slug,
+            title: node.frontmatter.title,
           },
         })
       })
       resolve()
     })
+  })
+}
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      alias: {
+        components: path.resolve(__dirname, "src/components"),
+        context: path.resolve(__dirname, "src/context"),
+        helpers: path.resolve(__dirname, "src/helpers"),
+        hooks: path.resolve(__dirname, "src/hooks"),
+        pages: path.resolve(__dirname, "src/pages"),
+      },
+    },
   })
 }

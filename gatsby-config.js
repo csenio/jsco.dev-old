@@ -40,6 +40,7 @@ module.exports = {
       options: {
         name: `posts`,
         path: `${__dirname}/src/posts/`,
+        /* eslint-disable */
         ignore: [`**/\.*`], // ignore files starting with a dot
       },
     },
@@ -62,6 +63,7 @@ module.exports = {
     //   resolve: `gatsby-plugin-create-client-paths`,
     //   options: { prefixes: [`/blog/*`] },
     // },
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
   ],
