@@ -5470,6 +5470,13 @@ gatsby-link@^2.2.0:
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
 
+gatsby-plugin-create-client-paths@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-create-client-paths/-/gatsby-plugin-create-client-paths-2.1.1.tgz#d20b68c73268d191d3bcabc3f45bc526e51cd025"
+  integrity sha512-6srKmNrBucWFCC83MU5kCyhPAtuWUINaM5cMk9byERGFqFT02ppNdVqKE2PrridjIdSN6bVe/U+6Pgu95t1exA==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+
 gatsby-plugin-manifest@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.2.0.tgz#e16d39bd415026594465e1763cc2abd43729a7d1"
@@ -8928,7 +8935,7 @@ netlify-cms@^2.9.3:
     react "^16.8.4"
     react-dom "^16.8.4"
 
-netlify-identity-widget@^1.4.11:
+netlify-identity-widget@^1.4.11, netlify-identity-widget@^1.5.5:
   version "1.5.5"
   resolved "https://registry.yarnpkg.com/netlify-identity-widget/-/netlify-identity-widget-1.5.5.tgz#e9ba8d7676263507106060236cf55c2992f425e4"
   integrity sha512-gCILbXMVn83TiRaiPCWk93ynyyYgxn8N/KoO+WOfyGZaNgq7gMMPtn7vo6VDe/ZczgyCn9DRlm3artNoj78/MQ==
