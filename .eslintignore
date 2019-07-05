@@ -1,2 +1,8 @@
 node_modules/*
 public/*
+node_modules
+coverage
+.cache
+build
+public
+.netlify
