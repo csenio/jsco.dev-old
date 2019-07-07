@@ -5,6 +5,7 @@ export default {
     yellow: "#F6C300",
     yellowLighter: "#ffdb54",
     red: "#ff1f4b",
+    orange: "#fa7557",
     beige: "rgba(246, 195, 0, 0.1)",
     white: "#fff",
     whiteFake: "#FAFAFC",

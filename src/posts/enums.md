@@ -4,12 +4,12 @@ title: "What problem do enums solve"
 subtitle: "What are enums used for and how you can implement them in JavaScript"
 ---
 
-_tldr: Use enums if there are a definite number of fixed values for any one
-variable_
+![sign](https://images.unsplash.com/photo-1508237866955-4439ca21b062?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)
 
----
+TLDR: Use enums if there are a definite number of fixed values a variable can
+have variable\*
 
-the typescript docs define enums as like this:
+The typescript docs define enums like this:
 
 > Enums allow us to define a set of named constants. Using enums can make it
 > easier to document intent, or create a set of distinct cases. TypeScript
@@ -20,12 +20,12 @@ pick it apart:
 
 We often use `booleans` to capture what state something is in
 
-```javascript
+```js
 const isAuth = true // or false
 ```
 
 If you read this code it's immediately clear what is meant by that, what options
-there are and what `isAuth`does , the problem is if we have more states than
+there are and what `isAuth` does, the problem is if we have more states than
 `true` and `false`.
 
 ```js

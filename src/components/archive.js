@@ -9,9 +9,9 @@ const Title = styled(Link)`
   font-weight: 700;
   color: ${p => p.theme.colors.white};
   &:hover {
-    color: ${p => p.theme.colors.red};
+    color: ${p => p.theme.colors.yellow};
   }
-  transition: color 0.2s;
+  transition: color 0.15s;
 `
 
 const post_archive_query = graphql`
@@ -21,7 +21,7 @@ const post_archive_query = graphql`
         node {
           frontmatter {
             title
-            date
+            date(formatString: "DD MMMM YY")
             subtitle
           }
           excerpt(pruneLength: 60)
@@ -47,20 +47,15 @@ const Archive = () => {
               </Title>
               <Text
                 fontWeight="500"
-                mt="10px"
                 color="greyLight"
-                fontWeight="400"
                 as="p"
+                fontWeight="400"
+                fontSize="13px"
+                my="8px"
               >
                 {node.frontmatter.date}
               </Text>
-              <Text
-                fontWeight="500"
-                mt="10px"
-                color="greyLight"
-                fontWeight="400"
-                as="p"
-              >
+              <Text fontWeight="500" color="greyLight" as="p">
                 {node.frontmatter.subtitle}
               </Text>
             </li>
