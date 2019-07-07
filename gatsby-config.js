@@ -44,6 +44,22 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `IBM Plex Sans`,
+            // subsets: [`sans-serif`],
+            variants: [`400`, `500`, `700`],
+          },
+          {
+            family: `Open Sans`,
+            variants: [`400`, `700`],
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         // CommonMark mode (default: true)
@@ -56,19 +72,13 @@ module.exports = {
         gfm: true,
         plugins: [
           {
-            resolve: `gatsby-plugin-prefetch-google-fonts`,
+            resolve: `gatsby-remark-images`,
             options: {
-              fonts: [
-                {
-                  family: `IBM Plex Sans`,
-                  // subsets: [`sans-serif`],
-                  variants: [`400`, `500`, `700`],
-                },
-                {
-                  family: `Open Sans`,
-                  variants: [`400`, `700`],
-                },
-              ],
+              maxWidth: 960,
+              withWebp: true,
+              tracedSVG: {
+                color: "#030f30",
+              },
             },
           },
           {

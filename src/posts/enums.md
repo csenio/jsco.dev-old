@@ -4,7 +4,9 @@ title: "What problem do enums solve"
 subtitle: "What are enums used for and how you can implement them in JavaScript"
 ---
 
-![sign](https://images.unsplash.com/photo-1508237866955-4439ca21b062?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)
+![sign post](https://images.unsplash.com/photo-1508237866955-4439ca21b062?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)
+
+### Photo by [Jens Johnsson](https://unsplash.com/photos/36a3U4_UUHY)
 
 TLDR: Use enums if there are a definite number of fixed values a variable can
 have variable\*

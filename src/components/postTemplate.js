@@ -26,6 +26,15 @@ const MarkdownContainer = styled.div`
   img {
     width: 100%;
   }
+  h3 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+  a {
+    color: ${p => p.theme.colors.yellow};
+  }
 `
 
 export const PostTemplate = ({ html, frontmatter }) => {
