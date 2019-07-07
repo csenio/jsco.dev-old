@@ -2,15 +2,16 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
+import { withTheme } from "styled-components"
 
 const Line = styled.div`
   height: 1px;
   width: 100%;
-  background: #ff1f4b;
-  background: linear-gradient(to left, #fff 0%, #ff1f4b 100%);
+  background: ${p => p.theme.colors.red};
+  background: ${p => p.theme.gradients.fire};
 `
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, theme }) => (
   <header
     css={`
       margin-bottom: 1.5rem;
@@ -25,17 +26,30 @@ const Header = ({ siteTitle }) => (
     >
       <Link
         to="/"
-        css="text-decoration: none;
-          color: #ff1f4b;
+        css={`
+          text-decoration: none;
+
           font-size: 20px;
           font-family: IBM Plex Sans;
           font-weight: 700;
-        "
+        `}
       >
-        {siteTitle}
+        <span role="img" aria-label="flame">
+          🔥{" "}
+          <span
+            css={`
+              color: ${theme.colors.red};
+              background: ${theme.gradients.fire};
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            `}
+          >
+            {siteTitle}
+          </span>
+        </span>
       </Link>
     </div>
-    <Line />
+    {/* <Line /> */}
   </header>
 )
 
@@ -47,4 +61,4 @@ Header.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
+export default withTheme(Header)

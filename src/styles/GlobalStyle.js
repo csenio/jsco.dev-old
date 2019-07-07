@@ -23,12 +23,9 @@ html {
   *:after {
     box-sizing: inherit;
   }
-  
-
-
 
   body {
-    background: ${p => p.theme.colors.black};
+    background: ${p => p.theme.colors.background};
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

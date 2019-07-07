@@ -8,9 +8,10 @@ export default {
     beige: "rgba(246, 195, 0, 0.1)",
     white: "#fff",
     whiteFake: "#FAFAFC",
-    greyLight: "#EDEDEF",
+    greyLight: "#9ca7b8",
     grey: "#62577a",
     black: "#030f30",
+    background: "#1b2638",
     overlay: "rgba(0, 0, 0, 0.7)",
   },
   shadows: {
@@ -28,6 +29,9 @@ export default {
   layout: {
     sideMargin: "15%",
     // sideMargin: "242px"
+  },
+  gradients: {
+    fire: `linear-gradient(to left, #ff1f4b 0%, #F6C300 100%)`,
   },
   fontSizes: ["14px", "18px", "23px", "26px", "36px", "72px"],
   breakpoints: ["767px", "950px", "1375px", "1199px"],

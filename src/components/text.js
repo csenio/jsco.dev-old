@@ -1,9 +1,9 @@
 import styled from "styled-components"
 import {
   fontFamily,
+  fontWeight,
   textAlign,
   lineHeight,
-  fontWeight,
   letterSpacing,
   maxWidth,
   color,
