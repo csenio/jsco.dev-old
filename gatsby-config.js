@@ -3,6 +3,9 @@ module.exports = {
     title: `jsco.dev`,
     description: `Personal website of Jesco Wüster.`,
     author: `@jescowuester`,
+    social: {
+      twitter: "@dan_abramov",
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -71,6 +74,13 @@ module.exports = {
         // GitHub Flavored Markdown mode (default: true)
         gfm: true,
         plugins: [
+          "gatsby-remark-copy-linked-files",
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank",
+            },
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
