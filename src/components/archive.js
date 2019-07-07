@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import { slugify } from "helpers"
+import Text from "components/text"
 
 const post_archive_query = graphql`
   query {
@@ -10,6 +11,7 @@ const post_archive_query = graphql`
         node {
           frontmatter {
             title
+            subtitle
           }
           excerpt(pruneLength: 60)
         }
@@ -26,13 +28,17 @@ const Archive = () => {
   return (
     <>
       <aside>
-        <h3>Archive</h3>
         <ul>
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <li key={node.frontmatter.title}>
               <Link to={`/blog/${slugify(node.frontmatter.title)}`}>
-                {node.frontmatter.title}
+                <Text fontWeight="500" as="h3">
+                  {node.frontmatter.title}
+                </Text>
               </Link>
+              <Text color="grey" fontWeight="400" as="p">
+                {node.frontmatter.subtitle}
+              </Text>
             </li>
           ))}
         </ul>

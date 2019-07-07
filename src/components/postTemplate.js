@@ -3,12 +3,7 @@ import Layout from "./layout"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 
-const MarkdownContainer = styled.div`
-  h1 {
-    color: red;
-  }
-  color: purple;
-`
+const MarkdownContainer = styled.div``
 
 export const PostTemplate = ({ html, frontmatter }) => {
   return (

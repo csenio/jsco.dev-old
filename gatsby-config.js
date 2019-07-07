@@ -54,8 +54,50 @@ module.exports = {
         pedantic: true,
         // GitHub Flavored Markdown mode (default: true)
         gfm: true,
-        // Plugins configs
-        plugins: [],
+        plugins: [
+          {
+            resolve: `gatsby-plugin-prefetch-google-fonts`,
+            options: {
+              fonts: [
+                {
+                  family: `IBM Plex Sans`,
+                  // subsets: [`sans-serif`],
+                  variants: [`400`, `500`, `700`],
+                },
+                {
+                  family: `Open Sans`,
+                  variants: [`400`, `700`],
+                },
+              ],
+            },
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {
+                js: "javascript",
+              },
+              showLineNumbers: true,
+              noInlineHighlight: false,
+              languageExtensions: [
+                {
+                  language: "superscript",
+                  extend: "javascript",
+                  definition: {
+                    superscript_types: /(SuperType)/,
+                  },
+                  insertBefore: {
+                    function: {
+                      superscript_keywords: /(superif|superelse)/,
+                    },
+                  },
+                },
+              ],
+            },
+          },
+        ],
       },
     },
     {

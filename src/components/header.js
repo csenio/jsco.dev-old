@@ -1,13 +1,20 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import styled from "styled-components"
+
+const Line = styled.div`
+  height: 1px;
+  width: 100%;
+  background: #ff1f4b;
+  background: linear-gradient(to left, #fff 0%, #ff1f4b 100%);
+`
 
 const Header = ({ siteTitle }) => (
   <header
-    style={{
-      background: `#fff`,
-      marginBottom: `1.45rem`,
-    }}
+    css={`
+      margin-bottom: 1.5rem;
+    `}
   >
     <div
       style={{
@@ -19,14 +26,16 @@ const Header = ({ siteTitle }) => (
       <Link
         to="/"
         css="text-decoration: none;
-          color: #FF0A43;
-          font-size: 40px;
-          font-family: inherit;
+          color: #ff1f4b;
+          font-size: 20px;
+          font-family: IBM Plex Sans;
+          font-weight: 700;
         "
       >
         {siteTitle}
       </Link>
     </div>
+    <Line />
   </header>
 )
 
