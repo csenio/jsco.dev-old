@@ -24,7 +24,6 @@ const post_archive_query = graphql`
             date(formatString: "DD MMMM YY")
             subtitle
           }
-          excerpt(pruneLength: 60)
         }
       }
     }
@@ -41,7 +40,7 @@ const Archive = () => {
       <aside>
         <ul>
           {data.allMarkdownRemark.edges.map(({ node }) => (
-            <li key={node.frontmatter.title}>
+            <li css="margin-bottom: 40px" key={node.frontmatter.title}>
               <Title to={`/blog/${slugify(node.frontmatter.title)}`}>
                 {node.frontmatter.title}
               </Title>
@@ -51,7 +50,7 @@ const Archive = () => {
                 as="p"
                 fontWeight="400"
                 fontSize="13px"
-                my="8px"
+                mb="8px"
               >
                 {node.frontmatter.date}
               </Text>

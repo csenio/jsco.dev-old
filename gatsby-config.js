@@ -4,7 +4,7 @@ module.exports = {
     description: `Personal website of Jesco Wüster.`,
     author: `@jescowuester`,
     social: {
-      twitter: "@dan_abramov",
+      twitter: `@dan_abramov`,
     },
   },
   plugins: [
@@ -74,11 +74,12 @@ module.exports = {
         // GitHub Flavored Markdown mode (default: true)
         gfm: true,
         plugins: [
-          "gatsby-remark-copy-linked-files",
+          `gatsby-remark-autolink-headers`,
+          `gatsby-remark-copy-linked-files`,
           {
-            resolve: "gatsby-remark-external-links",
+            resolve: `gatsby-remark-external-links`,
             options: {
-              target: "_blank",
+              target: `_blank`,
             },
           },
           {
@@ -87,24 +88,24 @@ module.exports = {
               maxWidth: 960,
               withWebp: true,
               tracedSVG: {
-                color: "#030f30",
+                color: `#030f30`,
               },
             },
           },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              classPrefix: "language-",
+              classPrefix: `language-`,
               inlineCodeMarker: null,
               aliases: {
-                js: "javascript",
+                js: `javascript`,
               },
               showLineNumbers: true,
               noInlineHighlight: false,
               languageExtensions: [
                 {
-                  language: "superscript",
-                  extend: "javascript",
+                  language: `superscript`,
+                  extend: `javascript`,
                   definition: {
                     superscript_types: /(SuperType)/,
                   },
@@ -123,7 +124,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-136852402-2",
+        trackingId: `UA-136852402-2`,
       },
     },
     // {

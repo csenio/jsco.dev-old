@@ -26,6 +26,14 @@ const MarkdownContainer = styled.div`
   img {
     width: 100%;
   }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 1rem;
+  }
   h3 {
     text-align: center;
     font-size: 16px;
