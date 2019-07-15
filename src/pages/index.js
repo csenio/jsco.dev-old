@@ -9,7 +9,7 @@ import Blob from "components/blob"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="The hottest page on the web" />
     <Archive />
   </Layout>
 )

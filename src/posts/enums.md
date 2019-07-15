@@ -1,5 +1,5 @@
 ---
-date: "2019-06-21"
+date: "2019-07-01"
 title: "What problem do enums solve"
 subtitle: "What are enums used for and how you can implement them in JavaScript"
 ---
