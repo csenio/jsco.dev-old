@@ -16,7 +16,7 @@ const Title = styled(Link)`
 
 const post_archive_query = graphql`
   query {
-    allMarkdownRemark(sort: { order: ASC, fields: frontmatter___date }) {
+    allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date }) {
       edges {
         node {
           frontmatter {
